@@ -61,6 +61,11 @@ input[type="button"]:active {
 }
 /* Helper Rulesets */
 
+a {
+  text-decoration: none;
+  color: var(--color);
+}
+
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -118,6 +123,39 @@ h4 { font-size: 1.5rem; }
     color: var(--background-color);
     font-size: .75em;
   }
+  header {
+    display: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .l-header {
+    display: flex;
+    flex-wrap: no-wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 50px;
+  }
+    .l-header .r-side .menu-options .option .link{
+      font-weight: var(--font-weight-semi-bold);
+      font-size: .9em;
+      position: relative;
+    }
+      .l-header .r-side .menu-options .option .link::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        bottom: 0;
+        left: 0;
+        height: 2px;
+        background: var(--color);
+        margin-top: 4px;
+        transition: width .2s ease-in-out;
+      }
+        .l-header .r-side .menu-options .option:hover .link::before {
+          width: 100%;
+        }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -330,6 +368,26 @@ h4 { font-size: 1.5rem; }
    .margin-lg-right-60 { margin-right: 60px;  }
    .margin-lg-right-40 { margin-right: 40px;  }
    .margin-lg-right-20 { margin-right: 20px;  }
+
+  .l-header {
+    padding: 20px 75px;
+  }
+    .l-header .sides {
+      flex: 0 0 50%;
+    }
+      .l-header .r-side {
+        display: flex;
+        justify-content: flex-end;
+      }
+        .l-header .r-side .menu-options {
+          display: flex;
+        }
+          .l-header .r-side .menu-options .option{
+            margin-right: 45px;
+          }
+          .l-header .r-side .menu-options .option:last-of-type {
+            margin-right: 0;
+          }
 
   section {
     padding: 40px 75px;
