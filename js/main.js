@@ -21,6 +21,7 @@ $(function(){
       $(this).toggleClass('active');
       $('.m-header').toggleClass('active');
       $('footer').toggleClass('active');
+      $('body').toggleClass('active');
      }
   })
 })
