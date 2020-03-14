@@ -2,27 +2,32 @@
 
 $(function(){
 
-  $('.accordian').addClass('move');
+  $('.accordian').add('move');
 
   $('.accordian').on({
-    click: function() {
+    click: function(e) {
       var panel = this.nextElementSibling;
       if(panel.style.maxHeight) {
         panel.style.maxHeight = null;
       }
       else {
+        var p = document.querySelectorAll('.panel');
+        console.log();
+        var panels = $(this).parent().find('.panel');
+        console.log(panels);
 
-        /* Find all elements with panel class name */
-        $('.panel').filter(function ( element ) {
+        const array = Array.from(p);
+        console.log(array);
 
-          /* Return elements with a max-height other than 0*/
-          /* Set the max-height of these elements to 0 */
-          return !$(this).css('max-height','0')
-        }).css('max-height','0');
+        array.forEach(el => {
+          if(el.style.maxHeight !== null)
+            el.style.maxHeight = null;
+        })
 
         /* Set max-height to scroll height to open panel*/
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
+        e.preventDefault();
     }
   })
 

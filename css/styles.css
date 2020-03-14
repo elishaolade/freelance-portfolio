@@ -206,7 +206,7 @@ footer {
 
   section {
     padding: var(--section-padding);
-    border-bottom: 1px #7a7a7a dashed;
+    /* border-bottom: 1px #7a7a7a dashed; */
   }
 
   header {
@@ -225,7 +225,7 @@ footer {
     background: var(--background-color);
     z-index: 999;
     transition: all .3s ease-in-out;
-    border-bottom: 1px #7a7a7a dashed;
+    /* border-bottom: 1px #7a7a7a dashed; */
     overflow: hidden;
     height: 50px;
   }
@@ -502,7 +502,7 @@ footer {
 
   section {
     padding: 40px 75px;
-    border-bottom: 1px #7a7a7a dashed;
+    /* border-bottom: 1px #7a7a7a dashed; */
   }
   section:first-of-type {
     min-height: 100vh;
@@ -586,6 +586,9 @@ footer {
     max-height: 0;
     overflow: hidden;
     transition: max-height .3s ease-out;
+  }
+  .panel.active{
+    max-height: 300px;
   }
     p {
       margin-top: 15px;
@@ -710,7 +713,7 @@ footer {
 
   section {
     padding: 40px 75px;
-    border-bottom: 1px #7a7a7a dashed;
+    /* border-bottom: 1px #7a7a7a dashed; */
   }
   section:first-of-type {
     min-height: 100vh;
