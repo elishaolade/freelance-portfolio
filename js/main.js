@@ -11,6 +11,9 @@ $(function(){
         panel.style.maxHeight = null;
       }
       else {
+        $('.panel').filter(function ( element ) {
+          return !$(this).css('max-height','0')
+        }).css('max-height','0');
         panel.style.maxHeight = panel.scrollHeight + "px";
       }
     }

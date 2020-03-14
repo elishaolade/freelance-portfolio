@@ -329,6 +329,7 @@ footer {
       overflow: hidden;
       transition: max-height .3s ease-out;
     }
+    .panel.active { }
       p {
         margin-top: 15px;
         margin-bottom: 30px;
