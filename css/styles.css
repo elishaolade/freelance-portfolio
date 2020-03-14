@@ -14,7 +14,7 @@
   --font-weight-semi-bold: 600;
   --font-weight-bold: 700;
   --section-padding: 30px;
-  --background-color: #000;
+  --background-color: #222830;
   --color: #F8F7EF;
 }
 
@@ -36,7 +36,8 @@ html, body {
   font-size: var(--font-size);
   font-weight: var(--font-weight-light);
   background: var(--background-color);
-  color: var(--color);
+  color: var(--color) !important;
+  position: relative;
 }
 
 button {
@@ -129,6 +130,29 @@ h4 { font-size: 1.5rem; }
     left: 0;
     width: 100%;
   }
+
+  .m-header {
+    display: none;
+    width: 100%;
+  }
+    .m-header .bar {
+      position: relative;
+    }
+    .m-header .menu-options {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+      .m-header .menu-options .option{
+        display: block;
+      }
+        .m-header .menu-options .option .link{
+          display: block;
+          padding: 20px;
+          font-weight: var(--font-weight-semi-bold);
+          font-size: 1.1rem;
+        }
+
   .l-header {
     display: flex;
     flex-wrap: no-wrap;
@@ -156,6 +180,9 @@ h4 { font-size: 1.5rem; }
         .l-header .r-side .menu-options .option:hover .link::before {
           width: 100%;
         }
+footer {
+    transition: all .3s ease-in-out;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -177,6 +204,65 @@ h4 { font-size: 1.5rem; }
     padding: var(--section-padding);
     border-bottom: 1px #7a7a7a dashed;
   }
+
+  header {
+    display: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .l-header { display: none; }
+
+  .m-header {
+    display: block;
+    padding: 10px 20px;
+    position: fixed;
+    background: var(--background-color);
+    z-index: 999;
+    transition: all .3s ease-in-out;
+    border-bottom: 1px #7a7a7a dashed;
+    overflow: hidden;
+    height: 50px;
+  }
+    .m-header .bar .arrow {
+      position: absolute;
+      top: calc(50% - 7px);
+      left: calc(100% - 10px);
+      transform: translate(-50%, calc( 100% - 10px )) rotate(45deg);
+      content: ' ';
+      border: solid #465061;
+      border-width: 0 1.5px 1.5px 0;
+      display: inline-block;
+      padding: 5px;
+      cursor: pointer;
+      transition: transform .2s ease-in-out;
+    }
+    .m-header .bar .arrow.active{
+      transform-origin: 30% 85%;
+      transform: rotate(225deg);
+    }
+    .m-header.height{
+      height: 50px;
+      overflow: hidden;
+      transition: all .3s ease-in-out;
+    }
+    .m-header.active{
+      height: 50%;
+      transition: all .3s ease-in-out;
+    }
+    footer {
+      position: relative;
+      background: var(--background-color);
+      transition: height .3s ease-in-out;
+    }
+    footer.active {
+      height: 50%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: 999;
+    }
 
   .intro {
     font-size: 1.3rem;
