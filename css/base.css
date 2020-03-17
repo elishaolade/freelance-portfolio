@@ -1,0 +1,239 @@
+@import "reset.css";
+
+/* Google Font: Fira Sans*/
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700&display=swap');
+
+
+:root {
+  --font-family: 'Fira Sans', sans-serif;
+  --font-size: 1em;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+  --section-padding: 30px;
+  --background-color: #222830;
+  --color: #F8F7EF;
+}
+
+body,html {
+  width: 100vw;
+  overflow-x: hidden;
+  /* background: var(--background-color); */
+  font-family: var(--font-family);
+  line-height: 20px;
+  font-size: 25px;
+}
+
+*,*::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .margin-xs-top-520 { margin-top: 520px; }
+  .margin-xs-top-420 { margin-top: 420px; }
+  .margin-xs-top-320 { margin-top: 320px; }
+  .margin-xs-top-220 { margin-top: 220px; }
+  .margin-xs-top-120 { margin-top: 120px; }
+  .margin-xs-top-100 { margin-top: 100px; }
+   .margin-xs-top-80 { margin-top: 80px;  }
+   .margin-xs-top-60 { margin-top: 60px;  }
+   .margin-xs-top-40 { margin-top: 40px;  }
+   .margin-xs-top-20 { margin-top: 20px;  }
+   .margin-xs-top-10 { margin-top: 10px;  }
+
+  .margin-xs-bottom-120 { margin-bottom: 120px; }
+  .margin-xs-bottom-100 { margin-bottom: 100px; }
+   .margin-xs-bottom-80 { margin-bottom: 80px;  }
+   .margin-xs-bottom-60 { margin-bottom: 60px;  }
+   .margin-xs-bottom-40 { margin-bottom: 40px;  }
+   .margin-xs-bottom-20 { margin-bottom: 20px;  }
+   .margin-xs-bottom-10 { margin-bottom: 10px;  }
+
+  .margin-xs-left-120 { margin-left: 120px; }
+  .margin-xs-left-100 { margin-left: 100px; }
+   .margin-xs-left-80 { margin-left: 80px;  }
+   .margin-xs-left-60 { margin-left: 60px;  }
+   .margin-xs-left-40 { margin-left: 40px;  }
+   .margin-xs-left-20 { margin-left: 20px;  }
+
+  .margin-xs-right-120 { margin-right: 120px; }
+  .margin-xs-right-100 { margin-right: 100px; }
+   .margin-xs-right-80 { margin-right: 80px;  }
+   .margin-xs-right-60 { margin-right: 60px;  }
+   .margin-xs-right-40 { margin-right: 40px;  }
+   .margin-xs-right-20 { margin-right: 20px;  }
+
+   h1 {
+     font-size: 1.20em;
+     line-height: 35px;
+     font-weight: var(--font-weight-bold);
+   }
+   h2 {
+     font-size: 1.10em;
+     line-height: 35px;
+     font-weight: var(--font-weight-semi-bold);
+   }
+   h3 {
+     font-size: .8em;
+     line-height: 25.5px;
+     font-weight: var(--font-weight-light);
+   }
+   h5 {
+     font-size: .7em;
+     line-height: 25.5px;
+     font-weight: var(--font-weight-light);
+   }
+   h6 {
+     font-size: .60em;
+     font-weight: var(--font-weight-light);
+   }
+   p {
+     font-size: .65em;
+     font-weight: var(--font-weight-light);
+     line-height: 22.5px;
+
+   }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .margin-xs-top-520 { margin-top: 520px; }
+  .margin-xs-top-420 { margin-top: 420px; }
+  .margin-xs-top-320 { margin-top: 320px; }
+  .margin-xs-top-120 { margin-top: 120px; }
+  .margin-xs-top-100 { margin-top: 100px; }
+   .margin-xs-top-80 { margin-top: 80px;  }
+   .margin-xs-top-60 { margin-top: 60px;  }
+   .margin-xs-top-40 { margin-top: 40px;  }
+   .margin-xs-top-20 { margin-top: 20px;  }
+
+  .margin-xs-bottom-120 { margin-bottom: 120px; }
+  .margin-xs-bottom-100 { margin-bottom: 100px; }
+   .margin-xs-bottom-80 { margin-bottom: 80px;  }
+   .margin-xs-bottom-60 { margin-bottom: 60px;  }
+   .margin-xs-bottom-40 { margin-bottom: 40px;  }
+   .margin-xs-bottom-20 { margin-bottom: 20px;  }
+   .margin-xs-bottom-10 { margin-bottom: 10px;  }
+
+  .margin-xs-left-120 { margin-left: 120px; }
+  .margin-xs-left-100 { margin-left: 100px; }
+   .margin-xs-left-80 { margin-left: 80px;  }
+   .margin-xs-left-60 { margin-left: 60px;  }
+   .margin-xs-left-40 { margin-left: 40px;  }
+   .margin-xs-left-20 { margin-left: 20px;  }
+
+  .margin-xs-right-120 { margin-right: 120px; }
+  .margin-xs-right-100 { margin-right: 100px; }
+   .margin-xs-right-80 { margin-right: 80px;  }
+   .margin-xs-right-60 { margin-right: 60px;  }
+   .margin-xs-right-40 { margin-right: 40px;  }
+   .margin-xs-right-20 { margin-right: 20px;  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .margin-lg-top-520 { margin-top: 520px; }
+  .margin-lg-top-420 { margin-top: 420px; }
+  .margin-lg-top-320 { margin-top: 320px; }
+  .margin-lg-top-120 { margin-top: 120px; }
+  .margin-lg-top-100 { margin-top: 100px; }
+   .margin-lg-top-80 { margin-top: 80px;  }
+   .margin-lg-top-60 { margin-top: 60px;  }
+   .margin-lg-top-40 { margin-top: 40px;  }
+   .margin-lg-top-20 { margin-top: 20px;  }
+
+  .margin-lg-bottom-120 { margin-bottom: 120px; }
+  .margin-lg-bottom-100 { margin-bottom: 100px; }
+   .margin-lg-bottom-80 { margin-bottom: 80px;  }
+   .margin-lg-bottom-60 { margin-bottom: 60px;  }
+   .margin-lg-bottom-40 { margin-bottom: 40px;  }
+   .margin-lg-bottom-20 { margin-bottom: 20px;  }
+   .margin-lg-bottom-10 { margin-bottom: 10px;  }
+
+  .margin-lg-left-120 { margin-left: 120px; }
+  .margin-lg-left-100 { margin-left: 100px; }
+   .margin-lg-left-80 { margin-left: 80px;  }
+   .margin-lg-left-60 { margin-left: 60px;  }
+   .margin-lg-left-40 { margin-left: 40px;  }
+   .margin-lg-left-20 { margin-left: 20px;  }
+
+  .margin-lg-right-120 { margin-right: 120px; }
+  .margin-lg-right-100 { margin-right: 100px; }
+   .margin-lg-right-80 { margin-right: 80px;  }
+   .margin-lg-right-60 { margin-right: 60px;  }
+   .margin-lg-right-40 { margin-right: 40px;  }
+   .margin-lg-right-20 { margin-right: 20px;  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .margin-lg-top-520 { margin-top: 520px; }
+  .margin-lg-top-420 { margin-top: 420px; }
+  .margin-lg-top-320 { margin-top: 320px; }
+  .margin-lg-top-120 { margin-top: 120px; }
+  .margin-lg-top-100 { margin-top: 100px; }
+   .margin-lg-top-80 { margin-top: 80px;  }
+   .margin-lg-top-60 { margin-top: 60px;  }
+   .margin-lg-top-40 { margin-top: 40px;  }
+   .margin-lg-top-20 { margin-top: 20px;  }
+
+  .margin-lg-bottom-120 { margin-bottom: 120px; }
+  .margin-lg-bottom-100 { margin-bottom: 100px; }
+   .margin-lg-bottom-80 { margin-bottom: 80px;  }
+   .margin-lg-bottom-60 { margin-bottom: 60px;  }
+   .margin-lg-bottom-40 { margin-bottom: 40px;  }
+   .margin-lg-bottom-20 { margin-bottom: 20px;  }
+   .margin-lg-bottom-10 { margin-bottom: 10px;  }
+
+  .margin-lg-left-120 { margin-left: 120px; }
+  .margin-lg-left-100 { margin-left: 100px; }
+   .margin-lg-left-80 { margin-left: 80px;  }
+   .margin-lg-left-60 { margin-left: 60px;  }
+   .margin-lg-left-40 { margin-left: 40px;  }
+   .margin-lg-left-20 { margin-left: 20px;  }
+
+  .margin-lg-right-120 { margin-right: 120px; }
+  .margin-lg-right-100 { margin-right: 100px; }
+   .margin-lg-right-80 { margin-right: 80px;  }
+   .margin-lg-right-60 { margin-right: 60px;  }
+   .margin-lg-right-40 { margin-right: 40px;  }
+   .margin-lg-right-20 { margin-right: 20px;  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .margin-xl-top-520 { margin-top: 520px; }
+  .margin-xl-top-420 { margin-top: 420px; }
+  .margin-xl-top-320 { margin-top: 320px; }
+  .margin-xl-top-120 { margin-top: 120px; }
+  .margin-xl-top-100 { margin-top: 100px; }
+   .margin-xl-top-80 { margin-top: 80px;  }
+   .margin-xl-top-60 { margin-top: 60px;  }
+   .margin-xl-top-40 { margin-top: 40px;  }
+   .margin-xl-top-20 { margin-top: 20px;  }
+
+  .margin-xl-bottom-120 { margin-bottom: 120px; }
+  .margin-xl-bottom-100 { margin-bottom: 100px; }
+   .margin-xl-bottom-80 { margin-bottom: 80px;  }
+   .margin-xl-bottom-60 { margin-bottom: 60px;  }
+   .margin-xl-bottom-40 { margin-bottom: 40px;  }
+   .margin-xl-bottom-20 { margin-bottom: 20px;  }
+   .margin-xl-bottom-10 { margin-bottom: 10px;  }
+
+  .margin-xl-left-120 { margin-left: 120px; }
+  .margin-xl-left-100 { margin-left: 100px; }
+   .margin-xl-left-80 { margin-left: 80px;  }
+   .margin-xl-left-60 { margin-left: 60px;  }
+   .margin-xl-left-40 { margin-left: 40px;  }
+   .margin-xl-left-20 { margin-left: 20px;  }
+
+  .margin-xl-right-120 { margin-right: 120px; }
+  .margin-xl-right-100 { margin-right: 100px; }
+   .margin-xl-right-80 { margin-right: 80px;  }
+   .margin-xl-right-60 { margin-right: 60px;  }
+   .margin-xl-right-40 { margin-right: 40px;  }
+   .margin-xl-right-20 { margin-right: 20px;  }
+}

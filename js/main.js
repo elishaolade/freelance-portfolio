@@ -12,20 +12,19 @@ $(function(){
       }
       else {
         var p = document.querySelectorAll('.panel');
-        console.log();
         var panels = $(this).parent().find('.panel');
-        console.log(panels);
 
         const array = Array.from(p);
-        console.log(array);
 
         array.forEach(el => {
           if(el.style.maxHeight !== null)
             el.style.maxHeight = null;
         })
-
         /* Set max-height to scroll height to open panel*/
         panel.style.maxHeight = panel.scrollHeight + "px";
+
+        $(this).find('.accordian-arrow').toggleClass('active');
+
       }
         e.preventDefault();
     }
