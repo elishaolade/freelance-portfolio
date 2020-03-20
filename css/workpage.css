@@ -1,14 +1,85 @@
 @import "base.css";
 
-
 :root {
   --alt-background-color: #ffffff;
   --alt-text-color: #f2f2e6;
 }
 
 @media only screen and (max-width: 600px) {
-  section { padding: 80px 0 0 0; }
 
+  #intro {
+    background: #000;
+    color: #fff;
+  }
+
+  .title {
+    margin: 190px 0 140px 0;
+    font-size: 1.65rem;
+  }
+
+  .title h3{
+    font-weight: 500;
+    display: flex;
+  }
+
+  /**/
+  .work-type-title-selected{
+    position: relative;
+  }
+  .work-type-title-selected::after {
+    position: relative;
+  }
+  .word {
+    position: relative;
+  }
+  .word::after{
+    content: ' ';
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid #fff;
+  }
+  /**/
+
+  /**/
+  .arrow-down-container {
+    position: relative;
+    width: 30px;
+  }
+  .arrow-down {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #fff;
+    cursor: pointer;
+    z-index: 100;
+    transition: .3s all ease-in-out;
+  }
+  .arrow-down.active {
+    transform: rotate(-180deg);
+  }
+  /**/
+
+
+  /**/
+  .options {
+    color: #fff;
+    max-height: 0;
+    overflow: hidden;
+    transition: .3s all ease-in-out;
+  }
+
+  .options .option a {
+    display: block;
+    padding: 14px 0;
+    color: #fff;
+  }
+  /**/
   .section-padding {
     min-height: 30px;
     padding: 20px 0;
@@ -17,70 +88,46 @@
   .container {
     width: calc(100% - 60px);
     margin: 0 auto;
+    overflow: hidden;
   }
 
-  /* Full width images*/
-  .full-width-image {
+  .works {
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto;
+    grid-rows: repeat(4, 1fr);
+  }
+
+  .work-section .single-work {
+    overflow: auto;
+    max-width: 100%;
+  }
+  .work-section .img-section {
+    overflow: hidden;
+  }
+  .work-section .display-img {
     max-width: 100%;
     height: auto;
   }
-  .webpage-img {
-    max-width: calc(100% - 60px);
-    height: auto;
-    margin: 0 auto;
-    border-right: 1px solid #e4e4e4;
-    border-left: 1px solid #e4e4e4;
-    border-bottom: 1px solid #e4e4e4;
-    -webkit-box-shadow: 1px 20px 5px -8px rgba(0,0,0,0.3);
-    -moz-box-shadow: 1px 20px 5px -8px rgba(0,0,0,0.3);
-    box-shadow: 1px 20px 5px -8px rgba(0,0,0,0.3);
-    position: relative;
-    top: 50px;
-  }
-  .webbrowser-frame {
-    display: flex;
-    align-items: center;
-    background: transparent;
-    border-bottom: 1px solid #e4e4e4;
-    border-top: 1px solid #e4e4e4;
-    height: 10px;
-    position: relative;
-  }
-  .webbrowser-frame-btns {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    margin-left: 3px;
-    }
-    .webbrowser-frame-btn {
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      border: 1px solid  #e4e4e4;
-      margin-right: 2px;
-    }
-  .full-width-image-40 {
-    max-width: calc100%;
-    height: auto;
-  }
-  .grayscale-gradient {
-        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfcfc+0,f2f2f2+52,c9c9c9+100 */
-        background: #fcfcfc; /* Old browsers */
-    background: -moz-linear-gradient(top, #fcfcfc 0%, #f2f2f2 52%, #f4f4f4 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f2f2f2 52%,#f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #fcfcfc 0%,#f2f2f2 52%,#f4f4f4 100%);
-  }
-  #intro {
-    padding: 30px 0 0 0;
-    background: #000000;
-    color: var(--color);
-  }
-  #intro-img { position: relative; top: 2px;}
 
-  .get-in-touch {
-    text-align: center;
-    padding: 50px 0;
+  .description-section {
+    display: flex;
+    width: 100%;
   }
+  .description-section .logo-container{
+
+  }
+  .description-section .services{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+  .description-section .services .service{
+    font-weight: var(--font-weight-light);
+    font-size: .55em;
+    margin: 0;
+  }
+
 
 }
 
@@ -144,9 +191,9 @@
   .grayscale-gradient {
         /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fcfcfc+0,f2f2f2+52,c9c9c9+100 */
         background: #fcfcfc; /* Old browsers */
-    background: -moz-linear-gradient(top, #fcfcfc 0%, #f2f2f2 52%, #f4f4f4 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #fcfcfc 0%,#f2f2f2 52%,#f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #fcfcfc 0%,#f2f2f2 52%,#f4f4f4 100%);
+        background: -moz-linear-gradient(top, #fcfcfc 0%, #f2f2f2 52%, #f4f4f4 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #fcfcfc 0%,#f2f2f2 52%,#f4f4f4 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #fcfcfc 0%,#f2f2f2 52%,#f4f4f4 100%);
   }
   #intro {
     padding: 30px 0 0 0;
