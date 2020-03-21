@@ -51,6 +51,14 @@ $(function(){
     link.addEventListener('click', ()=>{
       let clickedWord = link.dataset.value;
       displayWord.innerHTML = clickedWord;
+      if ( optionsMenu.style.maxHeight ) {
+        arrow.classList.toggle('active');
+        optionsMenu.style.maxHeight = null;
+      }
+      else {
+        arrow.classList.toggle('active');
+        optionsMenu.style.maxHeight = `${ optionsMenu.scrollHeight }px`;
+      }
     })
 
   }

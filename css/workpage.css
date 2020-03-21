@@ -10,15 +10,19 @@
   #intro {
     background: #000;
     color: #fff;
-  }
 
+    /* INSERTED 03/21/20 12:01 AM */
+    line-height: 45px;
+    /* INSERTED 03/21/20 12:01 AM */
+  }
+  #intro span { line-height: 45px; }
   .title {
     margin: 190px 0 140px 0;
-    font-size: 1.65rem;
   }
 
   .title h3{
     font-weight: 500;
+    font-size: 1.36rem;
     display: flex;
   }
 
@@ -30,17 +34,21 @@
     position: relative;
   }
   .word {
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
   }
-  .word::after{
-    content: ' ';
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-bottom: 2px solid #fff;
+
+  /* INSERTED 03/20/20 11:40PM */
+
+  .underline {
+  	background-size: 1px 1em;
+  	box-shadow: inset 0.000 .175em transparent, inset 0 -.07em #fff;
+  	display: inline;
   }
-  /**/
+
+  /* INSERTED 03/20/20 11:40PM */
+
 
   /**/
   .arrow-down-container {
@@ -73,12 +81,16 @@
     overflow: hidden;
     transition: .3s all ease-in-out;
   }
-
-  .options .option a {
-    display: block;
-    padding: 14px 0;
-    color: #fff;
-  }
+    .options .option {
+      /* INSERTED 03/21/20 12:01 AM */
+      line-height: 35px;
+      /* INSERTED 03/21/20 12:01 AM */
+    }
+      .options .option a {
+        display: block;
+        padding: 14px 0;
+        color: #fff;
+      }
   /**/
   .section-padding {
     min-height: 30px;
