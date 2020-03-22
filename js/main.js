@@ -50,14 +50,27 @@ $(function(){
     let link = optionLinks[i];
     link.addEventListener('click', ()=>{
       let clickedWord = link.dataset.value;
+
+
+      /*
+        INSERTED 10:54PM Sat. 03.22.20
+
+        Remove the selected list item
+      */
+      link.classList.toggle('.hidden');
+
+      /*INSERTED 10:54PM Sat. 03.22.20*/
+
       displayWord.innerHTML = clickedWord;
       if ( optionsMenu.style.maxHeight ) {
         arrow.classList.toggle('active');
         optionsMenu.style.maxHeight = null;
+
       }
       else {
         arrow.classList.toggle('active');
         optionsMenu.style.maxHeight = `${ optionsMenu.scrollHeight }px`;
+        optionsMenu.style.maxHeight = null;
       }
     })
 

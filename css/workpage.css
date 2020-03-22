@@ -12,27 +12,29 @@
     color: #fff;
 
     /* INSERTED 03/21/20 12:01 AM */
-    line-height: 45px;
+    line-height: 35px;
     /* INSERTED 03/21/20 12:01 AM */
   }
-  #intro span { line-height: 45px; }
+  #intro span { line-height: 35px; }
   .title {
     margin: 190px 0 140px 0;
   }
 
   .title h3{
     font-weight: 500;
-    font-size: 1.36rem;
+    font-size: 1.25rem;
     display: flex;
   }
 
-  /**/
+
   .work-type-title-selected{
     position: relative;
   }
+
   .work-type-title-selected::after {
     position: relative;
   }
+
   .word {
     display: flex;
     flex-wrap: wrap;
@@ -55,6 +57,7 @@
     position: relative;
     width: 30px;
   }
+
   .arrow-down {
     position: absolute;
     top: 50%;
@@ -68,6 +71,7 @@
     z-index: 100;
     transition: .3s all ease-in-out;
   }
+
   .arrow-down.active {
     transform: rotate(-180deg);
   }
@@ -80,18 +84,29 @@
     max-height: 0;
     overflow: hidden;
     transition: .3s all ease-in-out;
+    margin-top: 3px;
   }
+
     .options .option {
       /* INSERTED 03/21/20 12:01 AM */
-      line-height: 35px;
+      line-height: 28px;
       /* INSERTED 03/21/20 12:01 AM */
     }
+
+    /* INSERTED 03/21/20 11:00 PM */
+    .hidden{
+
+      display: none;
+    }
+    /* INSERTED 03/21/20 11:00 PMM */
+
       .options .option a {
         display: block;
-        padding: 14px 0;
+        padding: 12px 0;
         color: #fff;
       }
-  /**/
+
+
   .section-padding {
     min-height: 30px;
     padding: 20px 0;
@@ -141,6 +156,32 @@
   }
 
 
+
+
+
+  /*************************************\
+              #WORK-SECTION
+  \*************************************/
+
+  #work-section { }
+
+    #work-section .work-container {
+      position: absolute;
+    }
+
+      #work-section .work-item {
+
+      }
+
+        #work-section .work-item-img {
+
+        }
+
+          #work-section .work-item-img img { }
+
+        #work-section .work-item-description {
+
+        }
 }
 
 @media only screen and (min-width: 992px) {
@@ -154,6 +195,14 @@
   .container {
     width: calc(100% - 60px);
     margin: 0 auto;
+  }
+
+  .container.above{
+    width: calc(100% - 60px);
+    margin: 0 auto;
+    position: relative;
+    z-index: 800;
+    bottom: 300px;
   }
 
   /* Full width images*/
